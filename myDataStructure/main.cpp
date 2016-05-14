@@ -36,12 +36,26 @@ void Sort()
 {
 	int aArray[8] = { 4, 5, 2, 43, 21, 25, 11, 1 };
 	int bArray[9] = { 4, 5, 2, 43, 21, 25, 11, 1, 18 };
-	//快速排序
-	MergeSort(bArray, 8);
-	for (int i = 0; i < 8; i++)
+	int length = 9;
+
+	for (int i = 0; i < length; i++)
 	{
 		printf("%d ", bArray[i]);
 	}
+	printf("\n");
+	//归并排序
+	//MergeSort(bArray, length);
+
+	//选择排序
+	SimpleSelectSort(bArray, length);
+	//HeapSelectSort(bArray, length);
+
+
+	for (int i = 0; i < length; i++)
+	{
+		printf("%d ", bArray[i]);
+	}
+	printf("\n");
 }
 
 void main()
