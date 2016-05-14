@@ -1,0 +1,21 @@
+﻿生成启动时间为 2016/5/13 21:51:21。
+     1>项目“F:\04 C和C++\02二叉树练习\myDataStructure\myDataStructure\myDataStructure.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         D:\Program Files\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp selectSort.cpp
+         selectSort.cpp
+         main.cpp
+         正在生成代码...
+       Link:
+         D:\Program Files\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\04 C和C++\02二叉树练习\myDataStructure\Debug\myDataStructure.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:\04 C和C++\02二叉树练习\myDataStructure\Debug\myDataStructure.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\04 C和C++\02二叉树练习\myDataStructure\Debug\myDataStructure.lib" /MACHINE:X86 Debug\baseOperate.obj
+         Debug\main.obj
+         Debug\mergeSort.obj
+         Debug\myStack.obj
+         Debug\selectSort.obj
+         Debug\test.obj
+         Debug\Traverse.obj
+         myDataStructure.vcxproj -> F:\04 C和C++\02二叉树练习\myDataStructure\Debug\myDataStructure.exe
+     1>已完成生成项目“F:\04 C和C++\02二叉树练习\myDataStructure\myDataStructure\myDataStructure.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:10.33
