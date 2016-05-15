@@ -48,6 +48,9 @@
     <ClCompile Include="sortHelper.cpp">
       <Filter>源文件\02 Sort</Filter>
     </ClCompile>
+    <ClCompile Include="exchangeSort.cpp">
+      <Filter>源文件\02 Sort</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="myBinaryTree.h">

@@ -54,7 +54,9 @@ void Sort()
 	//DirectInsertSort(bArray, length);
 	//HalfInsertSort(bArray, length);
 	//ShellSort(bArray, length);
-	BetterShellSort(bArray, length);
+	//BetterShellSort(bArray, length);
+
+	//Ωªªª≈≈–Ú
 
 	for (int i = 0; i < length; i++)
 	{

@@ -79,6 +79,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="baseOperate.cpp" />
+    <ClCompile Include="exchangeSort.cpp" />
     <ClCompile Include="insertSort.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="mergeSort.cpp" />
