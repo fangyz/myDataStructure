@@ -35,7 +35,7 @@ void OperateBTree()
 void Sort()
 {
 	int aArray[8] = { 4, 5, 2, 43, 21, 25, 11, 1 };
-	int bArray[9] = { 4, 5, 2, 43, 21, 25, 11, 1, 18 };
+	int bArray[9] = { 2, 6, 5, 4, 21, 25, 11, 1, 18 };
 	int length = 9;
 
 	for (int i = 0; i < length; i++)
@@ -47,9 +47,14 @@ void Sort()
 	//MergeSort(bArray, length);
 
 	//Ñ¡ÔñÅÅÐò
-	SimpleSelectSort(bArray, length);
+	//SimpleSelectSort(bArray, length);
 	//HeapSelectSort(bArray, length);
 
+	//²åÈëÅÅÐò
+	//DirectInsertSort(bArray, length);
+	//HalfInsertSort(bArray, length);
+	//ShellSort(bArray, length);
+	BetterShellSort(bArray, length);
 
 	for (int i = 0; i < length; i++)
 	{

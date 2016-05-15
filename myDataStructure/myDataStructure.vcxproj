@@ -79,11 +79,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="baseOperate.cpp" />
+    <ClCompile Include="insertSort.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="mergeSort.cpp" />
     <ClCompile Include="myStack.cpp" />
     <ClCompile Include="selectSort.cpp" />
-    <ClCompile Include="test.cpp" />
+    <ClCompile Include="sortHelper.cpp" />
     <ClCompile Include="Traverse.cpp" />
   </ItemGroup>
   <ItemGroup>

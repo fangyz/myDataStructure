@@ -9,14 +9,18 @@ void SimpleSelectSort(int *a,int length)
 {
 	int index;
 	int i, j;
-	int temp=0;
+	int temp;
 	for (i = 0; i < length; i++)
 	{
 		index = i;
-		for (j = i; j < length-1; j++)
+		temp = a[i];
+		for (j = i; j < length; j++)
 		{
-			if (temp < a[j])
+			if (temp > a[j])
+			{
+				temp = a[j];
 				index = j;
+			}
 		}
 		//得到无序区中最小的值
 		if (index != i)
@@ -46,7 +50,6 @@ void SimpleSelectSort(int *a,int length)
 
 //声明方法
 void GetHeap(int *a, int index, int n);
-void Swap(int *a, int i, int j);
 
 /*堆选择排序,该排序时间复杂度主要集中在创建堆和更新堆。
 创建堆时有n/2次循环，每次循环因为判断条件使index<n/2故会比较lbn次，时间复杂度也就是nlbn。
@@ -86,12 +89,4 @@ void GetHeap(int *a, int index, int n){
 		index = Son+1;
 	}
 
-}
-
-//交换数组a中的两个数
-void Swap(int *a, int i, int j)
-{
-	int temp = a[i];
-	a[i] = a[j];
-	a[j] = temp;
 }

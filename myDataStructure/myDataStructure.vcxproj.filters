@@ -24,9 +24,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="test.cpp">
-      <Filter>源文件\02 Sort</Filter>
-    </ClCompile>
     <ClCompile Include="selectSort.cpp">
       <Filter>源文件\02 Sort</Filter>
     </ClCompile>
@@ -44,6 +41,12 @@
     </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="insertSort.cpp">
+      <Filter>源文件\02 Sort</Filter>
+    </ClCompile>
+    <ClCompile Include="sortHelper.cpp">
+      <Filter>源文件\02 Sort</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
