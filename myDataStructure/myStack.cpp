@@ -5,7 +5,7 @@ BinaryTree *btArrya[20];
 int currentPtr=0;
 //ÅĞ¶ÏÕ»ÊÇ·ñÎª¿Õ
 bool MyStackIsNULL(){
-	return currentPtr > 0 ? true : false;
+	return currentPtr <= 0 ? true : false;
 }
 
 //½øÕ»
@@ -15,14 +15,14 @@ void MyPush(BinaryTree* node){
 }
 //³öÕ»
 BinaryTree* MyPop(){
-	BinaryTree* no = btArrya[currentPtr];
-	btArrya[currentPtr] = NULL;
+	BinaryTree* no = btArrya[currentPtr-1];
+	btArrya[currentPtr-1] = NULL;
 	currentPtr--;
 	return no;
 }
 //·µ»ØÕ»¶¥
 BinaryTree* MyTop(){
-	BinaryTree* no = btArrya[currentPtr];
+	BinaryTree* no = btArrya[currentPtr-1];
 	return no;
 }
 

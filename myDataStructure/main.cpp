@@ -10,16 +10,16 @@ void OperateBTree()
 {
 	BinaryTree* root = new BinaryTree();
 	root->value = 6;
-	//初始化二叉树
+	//初始化二叉排序树
 	InitBiTree(root);
 
-	//新增节点9,5
+	//新增节点
 	AddBiTree(root, 3);
-	MiddleTraverse(root);
-	printf("\n");
+	//MiddleTraverse(root);
+	//printf("\n");
 	AddBiTree(root, 9);
-	MiddleTraverse(root);
-	printf("\n");
+	//MiddleTraverse(root);
+	//printf("\n");
 
 	//删除节点
 	//DeleteBiTree(root,3);
@@ -27,8 +27,11 @@ void OperateBTree()
 	//DeleteBiTree(root,5);
 	//DeleteBiTree(root,6);
 	//DeleteBiTree(root,9);
-	DeleteBiTree(root, 12);
-	MiddleTraverse(root);
+	//DeleteBiTree(root, 12);
+	//MiddleTraverse(root);
+	//FrontTraverse(root);
+	//MiddleTraverse(root);
+	NextTraverse(root);
 	printf("\n");
 }
 
@@ -57,6 +60,9 @@ void Sort()
 	//BetterShellSort(bArray, length);
 
 	//交换排序
+	//BubbleSort(bArray, length);
+	BetterBubbleSort(bArray, length);
+	QuickSort(bArray, 0, length);
 
 	for (int i = 0; i < length; i++)
 	{
@@ -68,9 +74,9 @@ void Sort()
 void main()
 {
 	//操作二叉树
-	//OperateBTree();
+	OperateBTree();
 
    //排序操作
-	Sort();
+	//Sort();
 
 }

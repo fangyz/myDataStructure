@@ -1,12 +1,11 @@
-﻿生成启动时间为 2016/5/15 10:43:04。
+﻿生成启动时间为 2016/5/16 23:34:07。
      1>项目“F:\04 C和C++\02二叉树练习\myDataStructure\myDataStructure\myDataStructure.vcxproj”在节点 2 上(Build 个目标)。
      1>ClCompile:
-         D:\Program Files\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt insertSort.cpp
-         insertSort.cpp
-     1>f:\04 c和c++\02二叉树练习\mydatastructure\mydatastructure\insertsort.cpp(98): warning C4101: “i”: 未引用的局部变量
-     1>f:\04 c和c++\02二叉树练习\mydatastructure\mydatastructure\insertsort.cpp(132): warning C4101: “i”: 未引用的局部变量
+         D:\Program Files\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Traverse.cpp
+         Traverse.cpp
        Link:
          D:\Program Files\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\04 C和C++\02二叉树练习\myDataStructure\Debug\myDataStructure.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:\04 C和C++\02二叉树练习\myDataStructure\Debug\myDataStructure.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\04 C和C++\02二叉树练习\myDataStructure\Debug\myDataStructure.lib" /MACHINE:X86 Debug\baseOperate.obj
+         Debug\exchangeSort.obj
          Debug\insertSort.obj
          Debug\main.obj
          Debug\mergeSort.obj
@@ -19,4 +18,4 @@
 
 生成成功。
 
-已用时间 00:00:00.90
+已用时间 00:00:01.01

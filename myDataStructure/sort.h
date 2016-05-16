@@ -8,7 +8,9 @@ void ShellSort(int *a, int length);               //希尔排序排序
 void BetterShellSort(int *a, int length);      //优化后的希尔排序
 
 //交换排序
-
+void BubbleSort(int *a, int length);            //原始冒泡排序
+void BetterBubbleSort(int *a, int length);   //优化后的冒泡排序
+void QuickSort(int *a, int start, int end);    //快速排序
 
 //选择排序
 void SimpleSelectSort(int *a, int length);    //简单选择排序
