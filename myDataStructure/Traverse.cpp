@@ -48,9 +48,10 @@ void NextTraverse(BinaryTree *root)
 	BinaryTree *node = root;
 	BinaryTree *pre = NULL;
 	MyPush(node);
-	//要输出节点的情况：一是叶子节点，一是
+	//要输出节点的情况：一是叶子节点；一是上一次输出的节点是现在这个节点的左孩子节点或有孩子节点，加上左孩子节点判断条件是因为有可能这种情况就是右孩子为null。
 	while (!MyStackIsNULL())
 	{
+		//这样每次拿的就是左节点
 		node = MyTop();
 		if ((node->leftTree == NULL&&node->rightTree == NULL) || (pre != NULL && (pre == node->leftTree || pre == node->rightTree)))
 		{
