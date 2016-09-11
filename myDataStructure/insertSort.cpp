@@ -10,7 +10,7 @@
 对于时间复杂度，最好情况下数据是有序的无需移动，比较次数为n-1；
 最坏情况下数组是一个倒序的，n-1次循环中，每次都要移动i+1次，比较次数为i    ，时间复杂度是O(n^2)；
 整体来看的话，肯定是要执行n次的，每次执行时比较与移动次数是n的一阶函数，故平均时间复杂度也是O(n^2)。
-缺点是时间复杂度为n^2,效率较低，因此改进的方法是折半插入排序。
+缺点是时间复杂度为n^2,效率较低，改进可从2个地方改进，一个是比较次数一个是移动次数。
 */
 void DirectInsertSort(int *a, int length)
 {
@@ -39,47 +39,37 @@ void DirectInsertSort(int *a, int length)
 //它仅仅只是减少了比较的次数，移动次数没有减少，故时间复杂度仍然为O(n^2)。
 void HalfInsertSort(int *a, int length)
 {
-	if (a == NULL || length < 0)
+	int i;
+	int start = 0, end = 0, mid = 0;
+	int currentIndex = 0;
+	int temp = 0;
+	if (a == NULL || length <= 0)
 		return;
-	int i, index,m,n,mid;
-	int value;
-	//进行i次循环，每次循环将i插入到0~i-1的有序区中
-	for (i = 1; i < length; i++){
-		if (a[i] < a[i - 1])
+	for (i = 1; i<length; i++)
+	{
+		currentIndex = i;
+		temp = a[i];
+		end = i;
+		mid = end;
+		//目的是找到一个位置mid，a[mid]>temp而a[mid-1]是小于或等于temp的
+		while (end>start&&temp<a[end - 1])
 		{
-			index = i;
-			//接下来进行折半查找，有序区范围是m~n
-			m = 0;
-			n = i - 1;
-			value = a[index];
-			while (m<n)
+			mid = (start + end) / 2;
+			if (a[mid]>temp)
+				end = mid;
+			else
 			{
-				mid = (n + m) / 2;
-				if (a[mid] ==value)
+				if (start == mid)
 				{
-					m = mid;
+					mid++;
 					break;
 				}
-				if (a[mid]>value)
-					n = mid;
-				else
-					m = mid;
-				//如果发生以下这种情况，
-				if (n - m == 1||n==m){
-					if (a[m] > value)
-						m--;
-					//只要发生这些特殊情况，一律退出，此时m=-1或者a[m]小于value而a[n]大于value
-					break;
-				}
+				start = mid;
 			}
-			//上面折半查找后m所在位置的数是小于或等于value的，而m后面的数则是大于或等于value的
-			while (index>m+1)
-			{
-				a[index] = a[index - 1];
-				index--;
-			}
-			a[index] = value;
 		}
+		for (; currentIndex>mid; currentIndex--)
+			a[currentIndex] = a[currentIndex - 1];
+		a[currentIndex] = temp;
 	}
 }
 
@@ -90,39 +80,38 @@ void HalfInsertSort(int *a, int length)
 刚开始接触希尔排序觉得有点麻烦，静下心来思考后就会发现希尔排序比直接插入排序时间复杂度低。首先循环次数将不再是n-2次了，而是将分组的次数。
 对于每一次循环时间因为仍然是直接插入排序复杂度仍然是O(n^2)，可是由于进行分组现在的n已经减小了，故Tn总体上也会减小。
 而且还有一点，直接插入排序的特点是数组越有序那移动比较次数越少，希尔排序中越往后数组越有序因此效率还会提高。
-查阅资料发现希尔排序的时间复杂度是一个关于增量的函数，但可以肯定的是它比O(n^2)快比O(n)慢，速度进次于快速排序。
+查阅资料发现希尔排序的时间复杂度是一个关于增量的函数，可以试着计算它的时间复杂度，lbd*d*O((length/d)^2)
+可以肯定的是它比O(n^2)快比O(n)慢，速度仅次于快速排序。
 */
 
 //这里将增量d初始化为length的一半，之后每次减半直到1
 void ShellSort(int *a, int length){
-	int i, j,k;
-	int d;//增量
-	int value,index;//直接插入排序中需要的变量
-	//循环次数为lbn，
-	for (d = length / 2; d >= 1; d = d / 2)
+	int d;				//定义增量
+	int i, j;
+	int temp;		//暂存量
+	int index;		//需要插入的位置
+	if (a == NULL || length <= 0)
+		return;
+	//进行lbd次循环
+	for (d = length / 2; d>0; d = d / 2)
 	{
-		//一次循环，进行分组，对每一组执行希尔排序
-		for (j = 0; j < d; j++)
+		//直接插入排序的循环次数
+		for (i = 0; i<d; i++)
 		{
-			//对每一组进行直接插入排序,要注意插入排序是从第二位数开始进行循环比较的。
-			for (k = j+d; k < length; k = k + d)
+			//开始直接插入排序
+			for (j = i + d; j<length; j = j + d)
 			{
-				if (a[k] < a[k - d]){
-					value = a[k];
-					index = k;
-					while (a[index-d]>value&&index>0)
-					{
-						a[index] = a[index - d];
-						index = index - d;
-					}
-					a[index] = value;
+				index = j - d;
+				temp = a[j];
+				while (temp<a[index] && index >= 0)
+				{
+					a[index + d] = a[index];
+					index = index - d;
 				}
+				a[index + d] = temp;
 			}
-
 		}
-
 	}
-
 }
 
 
